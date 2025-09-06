@@ -1,11 +1,15 @@
 # Fudan-Introduction-to-Database-System-2025-Spring
+
 This repository contains my solutions for the Introduction to Database Systems course (taken in Spring 2025) labs.
 
 ## Midterm Lab: Book Sales Management System
+
 Design and implementation of a Book Sales Management System
 
 ### Final Lab: Implementation and Performance Analysis of Block Nested Loop Join in PostgreSQL
+
 (the following content were produed by ai)
+
 This project involved modifying the PostgreSQL database kernel to implement a Block Nested Loop Join algorithm, a fundamental database join operation optimized for reduced I/O overhead.
 
 Key Tasks Completed:
