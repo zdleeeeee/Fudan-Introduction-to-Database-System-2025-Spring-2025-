@@ -1,0 +1,347 @@
+/* 基础重置 & 全局样式 */
+:root {
+  --primary-color: #1890ff;
+  /* 主色 */
+  --success-color: #52c41a;
+  /* 成功色 */
+  --error-color: #f5222d;
+  /* 错误色 */
+  --text-color: rgba(0, 0, 0, 0.85);
+  /* 正文颜色 */
+  --border-color: #d9d9d9;
+  /* 边框色 */
+}
+
+* {
+  margin: 20;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+  /* background-color: #ffffff;*/
+  width: 95%;
+  max-width: 900px;
+  margin: 0px auto;
+  padding: 0 0;
+}
+
+/* 布局样式 */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 通用组件样式 */
+.button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 表格样式（适配之前的财务记录需求） */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #fafafa;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
+/* Login */
+/* 基础容器样式 */
+.login-container {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* 表单样式 */
+.login-form {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #3730a3;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* 输入框组 */
+.form-input-group {
+  margin-bottom: 24px;
+}
+
+.input-field {
+  margin-bottom: 16px;
+}
+
+.input-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e0e7ff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 2px #e0e7ff;
+}
+
+/* 提交按钮 */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.submit-button.loading {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.button-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 加载动画 */
+.spinner {
+  animation: spin 1s linear infinite;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+.spinner-circle {
+  opacity: 0.25;
+  stroke: currentColor;
+}
+
+.spinner-path {
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 表单页脚 */
+.form-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e7ff;
+  text-align: center;
+}
+
+.register-link {
+  color: #6366f1;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.register-link:hover {
+  color: #4f46e5;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 24px;
+  }
+  
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Register */
+/* 基础容器样式 */
+.register-container {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 表单容器 */
+.register-form {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* 表单标题 */
+.form-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #3730a3;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* 表单组 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* 输入框样式 */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e7ff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  margin-bottom: 4px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 2px rgba(165, 180, 252, 0.3);
+}
+
+/* 输入提示 */
+.input-hint {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  padding-left: 4px;
+}
+
+/* 提交按钮 */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 16px;
+}
+
+.submit-button:hover {
+  background: #4338ca;
+}
+
+/* 表单页脚 */
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.login-link {
+  color: #6366f1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 24px;
+  }
+  
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+}

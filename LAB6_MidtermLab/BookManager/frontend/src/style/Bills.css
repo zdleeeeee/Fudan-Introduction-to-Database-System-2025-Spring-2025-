@@ -1,0 +1,251 @@
+/* 基础容器样式 */
+.bills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 头部样式 */
+.bills-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #3730a3;
+  margin: 0;
+}
+
+.back-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e0e7ff;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #f5f7ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 筛选区域 */
+.filters-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.filter-item {
+  flex: 1;
+  min-width: 180px;
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #475569;
+  font-size: 14px;
+}
+
+.filter-input,
+.filter-select {
+  min-width: 180px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 2px rgba(165, 180, 252, 0.3);
+}
+
+.filter-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.refresh-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.refresh-button:hover {
+  background: #4338ca;
+}
+
+/* 记录表格 */
+.records-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.records-table th {
+  background: #f8fafc;
+  font-weight: 500;
+  color: #475569;
+}
+
+.records-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* 表格单元格特定样式 */
+.record-id {
+  font-weight: 500;
+  color: #4f46e5;
+}
+
+.record-time {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.record-type {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.type-purchase {
+  color: #3b82f6;
+}
+
+.type-sale {
+  color: #10b981;
+}
+
+.book-info {
+  min-width: 200px;
+}
+
+.book-title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.book-detail {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.transaction-details {
+  min-width: 120px;
+}
+
+.transaction-item {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.operator {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* 无记录提示 */
+.no-records {
+  text-align: center;
+  padding: 24px;
+  color: #64748b;
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .records-table th,
+  .records-table td {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bills-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .filter-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .filter-item {
+    min-width: 100%;
+  }
+  
+  .records-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bills-container {
+    padding: 16px;
+  }
+  
+  .records-table th,
+  .records-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .book-title,
+  .book-detail,
+  .transaction-item {
+    font-size: 13px;
+  }
+}

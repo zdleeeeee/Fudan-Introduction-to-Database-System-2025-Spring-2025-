@@ -1,0 +1,261 @@
+/* 基础容器样式 */
+.orders-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 头部样式 */
+.orders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #3730a3;
+  margin: 0;
+}
+
+.back-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e0e7ff;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #f5f7ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 工具栏 */
+.orders-toolbar {
+  margin-bottom: 24px;
+}
+
+.create-order-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.create-order-button:hover {
+  background: #4338ca;
+}
+
+/* 表格容器 */
+.orders-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 表格样式 */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.orders-table th {
+  background: #f8fafc;
+  font-weight: 500;
+  color: #475569;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* 表格单元格特定样式 */
+.order-id {
+  font-weight: 500;
+  color: #4f46e5;
+}
+
+.book-info {
+  min-width: 200px;
+}
+
+.book-title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.book-detail,
+.purchase-detail {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.purchase-info {
+  min-width: 120px;
+}
+
+.status-cell {
+  min-width: 100px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-badge.unpaid {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-badge.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.returned {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.stock-status {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.time-cell {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* 操作按钮 */
+
+.action-container {
+  min-height: 36px; /* 按钮高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.action-button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  margin: 8px;
+}
+
+.pay-button {
+  background: #4f46e5;
+  color: white;
+}
+
+.return-button {
+    background: #ee6b1a;
+    color: white;
+}
+
+.pay-button:hover:not(.processing) {
+  background: #4338ca;
+}
+
+.pay-button.processing {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.stock-button {
+  background: #10b981;
+  color: white;
+}
+
+.stock-button:hover {
+  background: #0d9f6e;
+}
+
+/* 无订单提示 */
+.no-orders-message {
+  text-align: center;
+  padding: 24px;
+  color: #64748b;
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .orders-table th,
+  .orders-table td {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .orders-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .action-button {
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-container {
+    padding: 16px;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .book-title,
+  .book-detail,
+  .purchase-detail {
+    font-size: 13px;
+  }
+  
+  .action-button {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}

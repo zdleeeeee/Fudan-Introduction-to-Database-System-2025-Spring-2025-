@@ -1,0 +1,131 @@
+/* HOME */
+/* 基础容器样式 */
+.home-container {
+  min-height: 100vh;
+  background: white;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 顶部栏样式 */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #3730a3;
+  margin: 0;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.welcome-subtitle {
+  color: #6366f1;
+  margin: 8px 0 0 0;
+  font-size: 14px;
+}
+
+.logout-button {
+  padding: 8px 24px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e0e7ff;
+  color: #4f46e5;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #f5f7ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮网格布局 */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* 大按钮样式 */
+.big-button {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  text-decoration: none;
+  height: 180px;
+}
+
+.big-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #f5f7ff;
+  border-color: #c7d2fe;
+}
+
+.button-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.button-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3730a3;
+  margin-bottom: 8px;
+}
+
+.button-hint {
+  font-size: 14px;
+  color: #818cf8;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.big-button:hover .button-hint {
+  opacity: 1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .logout-button {
+    width: 100%;
+  }
+  
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+}
